@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/produtos.css">
+  <link rel="stylesheet" href="assets/style/cadastrocss.css">
+
+  <title>Loguin</title>
+
+</head>
+
+<body>
+  <header>
+    <style>
+      * {
+        box-sizing: border-box
+      }
+
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+      }
+
+      .mySlides {
+        display: none
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+
+      .slideshow-container {
+        width: 80vw;
+        position: relative;
+        margin: auto;
+      }
+
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+
+      @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+    </style>
+    </head>
+
+    <body>
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img class="img__carrosel" src="assets/img/banners 1.jpg">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img class="img__carrosel" src="assets/img/gaming shop 1.jpeg">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img class="img__carrosel" src="assets/img/gaming shop2.jpeg">
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img class="img__carrosel" src="assets/img/gaming shop 3.jpeg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+  </header>
+  <main>
+    <div class="div__search">
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet" />
+
+      <input class="search" type="text" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome" />
+    </div>
+    <div class="nav">
+      <a href="cadastro.html"><button class="btn__nav">Login</button></a>
+      <a href="pedido.html"><button class="btn__nav">Pedidos</button></a>
+    </div>
+    <section class="container__products">
+      <div class="product">
+        <img class="img__product" src="assets/img/playstation 5.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Playstation 5</p>
+          <p>R$ 5.900</p>
+          <p>6 Un</p>
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/xbox series x.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Xbox series</p>
+          <p>R$ 5.900</p>
+          <p>1 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/download.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Playstation 5</p>
+          <p>R$ 5.900</p>
+          <p>3 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/nintendo switch.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Nintendo swith black</p>
+          <p>R$ 1.980</p>
+          <p>3 Un.</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/controle ps5.jpeg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Controle PS5 Red</p>
+          <p>R$ 190,00</p>
+          <p>10 Un.</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/controle xboxone sem fio.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>controle Xbox ONE s/ Fio</p>
+          <p>R$ 190,00</p>
+          <p>9 Un.</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/fone razer.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Playstation 5</p>
+          <p>R$ 279,99</p>
+          <p>5 Un.</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/teclado kumara braco rgb.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Teclado Gamer KUMARA RGB</p>
+          <p>R$ 210,00</p>
+          <p>5 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/mouse gamer havit ms1001 rgb.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Mouse Gamer Havit</p>
+          <p>R$ 321,00</p>
+          <p>11 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/mouse gamer razer deather.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>Mouse Gamer Razer Deather</p>
+          <p>R$ 190,00</p>
+          <p>5 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/fifa 22 ps4.jpg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>FIFA 22 Ps4</p>
+          <p>R$ 174,00</p>
+          <p>5 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+      <div class="product">
+        <img class="img__product" src="assets/img/fifa xbox .jpeg" alt="imagem do playstation 5">
+        <div class="tittles">
+          <p>FIFA 22 XBOX</p>
+          <p>R$ 150,00</p>
+          <p>5 Un</p>
+
+        </div>
+        <a href="pedido.html"><button class="button">Comprar</button></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Criado por Filipe Augusto - 08/06/2022</p>
+  </footer>
+</body>
+
+</html>

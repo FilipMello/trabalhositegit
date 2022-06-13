@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/produtos.css">
+    <link rel="stylesheet" href="assets/style/cadastrocss.css">
+    <link rel="stylesheet" href="assets/style/pedido.css">
+    <title>Pedidos</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Faça seu pedido já !</h1>
+
+    </header>
+    <main class="container">
+        <section class="form">
+
+            <input class="input__form" type="text" name="nome do cliente" placeholder="Digite seu nome">
+            <input class="input__form" type="email" name="e-mail do usuario" placeholder=" Digite seu email">
+            <input class="input__form" type="text" name="Nome do produto" placeholder="Qual Produto">
+            <label for="frete">escolha seu frete</label>
+            <select class="select__frete" name="frete" id="frete">
+                <option value="correio">correio </option>
+                <option value="particular">particular</option>
+            </select>
+            <h2>Escolha seu pagamento</h2>
+            <label class="pix">
+                pix
+                <input class="check" type="checkbox" checked="checked">
+            </label>
+            <button class="btn__pagamento">Comprar</button>
+            <h2>Entre em contato</h2>
+            <img class="icon__contact" src="assets/img/wpp.png" alt="whatsapp">
+        </section>
+        <div class="img__form">
+            <img src="assets/img/Ecommerce checkout laptop-cuate.png" alt="pagamento">
+        </div>
+        <div class="nav">
+            <a href="cadastro.html"><button class="btn__pagamento">Login</button></a>
+            <a href="produtos.html"><button class="btn__pagamento">produtos</button></a>
+          </div>
+       
+    </main>
+    <footer>
+        <p>Criado por Filipe Augusto - 08/06/2022</p>
+      </footer>
+</body>
+
+</html>
